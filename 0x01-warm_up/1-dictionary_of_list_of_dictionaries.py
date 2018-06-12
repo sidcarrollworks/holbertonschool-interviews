@@ -14,8 +14,10 @@ if __name__ == "__main__":
             each.pop("userId", None)
             each.pop("id", None)
             task_name = each.pop("title", None)
+            completed = each.pop("completed", None)
             each["username"] = user["username"]
             each["task"] = task_name
+            each["completed"] = completed
         new_dict[str(userId)] = tasks
 
     with open('todo_all_employees.json', 'w') as f:
